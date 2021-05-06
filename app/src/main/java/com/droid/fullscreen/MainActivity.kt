@@ -13,9 +13,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
+        startLockTask()
         val button = findViewById<Button>(R.id.btn)
 
+
         button.setOnClickListener {
+            stopLockTask()
             if(isFullScreen){
                 showSystemUI()
                 isFullScreen = false
